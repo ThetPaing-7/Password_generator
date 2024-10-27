@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background-color: black;
+    --left-background-color: white;
+    --right-background-color:#00ffff;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+.left-container,
+.right-container{
+    height: 100vh;
+}
+
+.left-container{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--left-background-color);
+}
+
+.right-container{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--right-background-color);
+}
