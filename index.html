@@ -7,7 +7,7 @@
     <!-- Css link -->
      <link rel="stylesheet" href="style.css">
      <!-- JS link -->
-      <script src="jsfile.js"></script>
+      <script src="jsfile.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,12 +15,33 @@
          <div class="left-container">
             <div class="generate-holder">
                 <h2>"Generate Password"</h3>
-                <h3 id="displayPass"></h3>
+                <h3 id="displayPass">This is Password</h3>
                 
+                <!-- Character counts  -->
                 <div class="char-counts">
-                    <input type="range" id="charCounts" name="charCounts" min="0" max="11" step="1">
-                    <label for="charCounts">Characters</label><span id="displayCharCounts"></span>
+                    <input type="range" id="charCounts" name="charCounts" min="5" max="30" step="1">
+                    <label for="charCounts">Characters: </label><span id="displayCharCounts"></span>
                 </div>
+
+                <!-- Features they want to have  -->
+                 <div>
+                    <label for="NumbersAndSymbols">"Include Numbers & Symbol"</label>
+                    <input type="checkbok" id="NumbersAndSymbols">
+                </div>
+                 <div>
+                    <label for="capLetters">"Capitalize Each Letters"</label>
+                    <input type="checkbok" id="capLetters">
+                </div>
+                 <div>
+                    <label for="fullWords">"Full Words"</label>
+                    <input type="checkbok" id="fullWords">
+                </div>
+                <div>
+                    <label for="onlyNumbers">"Only Pin Numbers"</label>
+                    <input type="checkbok" id="onlyNumbers">
+                </div>
+
+                <button id="generatePassword">Generate Password</button>
             </div>
 
          </div>
