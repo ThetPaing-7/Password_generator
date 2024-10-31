@@ -19,29 +19,28 @@
                 
                 <!-- Character counts  -->
                 <div class="char-counts">
-                    <input type="range" id="charCounts" name="charCounts" min="5" max="30" step="1">
+                    <input type="range" id="charCounts" name="charCounts" min="5" max="30" step="1" value="8">
                     <label for="charCounts">Characters: </label><span id="displayCharCounts"></span>
                 </div>
 
                 <!-- Features they want to have  -->
                  <div>
                     <label for="NumbersAndSymbols">"Include Numbers & Symbol"</label>
-                    <input type="checkbok" id="NumbersAndSymbols">
+                    <input type="checkbox" id="NumbersAndSymbols" name="NumbersAndSymbols">
                 </div>
                  <div>
                     <label for="capLetters">"Capitalize Each Letters"</label>
-                    <input type="checkbok" id="capLetters">
+                    <input type="checkbox" id="capLetters" name="capLetters">
                 </div>
                  <div>
-                    <label for="fullWords">"Full Words"</label>
-                    <input type="checkbok" id="fullWords">
+                    <label for="fullWords">"Letters"</label>
+                    <input type="checkbox" id="fullWords" name="fullWords">
                 </div>
                 <div>
                     <label for="onlyNumbers">"Only Pin Numbers"</label>
-                    <input type="checkbok" id="onlyNumbers">
+                    <input type="checkbox" id="onlyNumbers" name="onlyNumbers">
                 </div>
 
-                <button id="generatePassword">Generate Password</button>
             </div>
 
          </div>
