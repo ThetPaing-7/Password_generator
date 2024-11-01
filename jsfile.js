@@ -6,7 +6,16 @@ charCounts.addEventListener("input", (event) => {
     display.textContent = event.target.value;
     const password = generatePassword();
     document.getElementById("displayPass").textContent = password;
+    const strength = MeausrePasswordStrength(password);
+    strength === 'Strong' ? document.getElementById("PasswodStrenght").style.color = "green" : document.getElementById("PasswodStrenght").style.color = "red"
+    document.getElementById("PasswodStrenght").textContent = strength;
 });
+
+document.getElementById("onlyNumbers").addEventListener("change",(event) => {
+    (event.target.checked) ? disableOtherOptions() : enableOtherOptions()
+})
+
+
 
 // For generating password
 function generatePassword(){
@@ -30,9 +39,7 @@ function generatePassword(){
     }else if (fullWords) {
         return smallLetters(length);
     } else if (onlyNumbers) {
-        document.getElementById("NumbersAndSymbols").disabled = false;
-        document.getElementById("capLetters").disabled = false;
-        document.getElementById("fullWords").disabled = false;
+        disableOtherOptions();
         return numbersOnly(length);
     } else{
         return randomPassword(length)
@@ -112,3 +119,17 @@ function enableOtherOptions() {
     document.getElementById("capLetters").disabled = false;
     document.getElementById("fullWords").disabled = false;
 }
+
+function MeausrePasswordStrength(str) {
+    const hasLetter = /[a-zA-Z]/.test(str);
+    const hasNumber = /\d/.test(str);
+    const hasSymbol = /[^a-zA-Z0-9]/.test(str);
+    const isLongEnough = str.length > 8;
+
+    if (hasLetter && hasSymbol && isLongEnough) {
+        return "Strong";
+    } else {
+        return "Weak";
+    }
+}
+

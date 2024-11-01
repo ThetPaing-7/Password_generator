@@ -8,6 +8,10 @@
      <link rel="stylesheet" href="style.css">
      <!-- JS link -->
       <script src="jsfile.js" defer></script>
+      <!-- Google font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,31 +19,37 @@
          <div class="left-container">
             <div class="generate-holder">
                 <h2>"Generate Password"</h3>
-                <h3 id="displayPass">This is Password</h3>
-                
+                <h3 id="displayPass">_______________________</h3>
+                <h3 id="PasswodStrenght"></h3>
+            
                 <!-- Character counts  -->
                 <div class="char-counts">
                     <input type="range" id="charCounts" name="charCounts" min="5" max="30" step="1" value="8">
-                    <label for="charCounts">Characters: </label><span id="displayCharCounts"></span>
+                    <label for="charCounts" t>Characters: </label><span id="displayCharCounts"></span>
                 </div>
 
-                <!-- Features they want to have  -->
-                 <div>
-                    <label for="NumbersAndSymbols">"Include Numbers & Symbol"</label>
-                    <input type="checkbox" id="NumbersAndSymbols" name="NumbersAndSymbols">
+                <div class="optionGroup">
+                     <!-- Features they want to have  -->
+                    <div>
+                        <input type="checkbox" id="NumbersAndSymbols" name="NumbersAndSymbols">
+                        <label for="NumbersAndSymbols">"Include Numbers & Symbol"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="capLetters" name="capLetters">
+                        <label for="capLetters">"Capitalize Letters"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fullWords" name="fullWords">
+                        <label for="fullWords">"Letters"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="onlyNumbers" name="onlyNumbers">
+                        <label for="onlyNumbers">"Only Pin Numbers"</label>
+                    </div>
+
                 </div>
-                 <div>
-                    <label for="capLetters">"Capitalize Each Letters"</label>
-                    <input type="checkbox" id="capLetters" name="capLetters">
-                </div>
-                 <div>
-                    <label for="fullWords">"Letters"</label>
-                    <input type="checkbox" id="fullWords" name="fullWords">
-                </div>
-                <div>
-                    <label for="onlyNumbers">"Only Pin Numbers"</label>
-                    <input type="checkbox" id="onlyNumbers" name="onlyNumbers">
-                </div>
+
+               
 
             </div>
 
